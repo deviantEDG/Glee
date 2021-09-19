@@ -3,6 +3,113 @@
 @import 'reset';
 @import 'global';
 
+.header{
+	padding: 50px 0;
+	&__inner{
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+}
+
+.menu{
+	&__list{
+		display: flex;
+	}
+	&__list-item + .menu__list-item{
+		padding-left: 33px;
+	}
+	&__list-link{
+		@extend %rubik-700; // на макете указано 500, но там явно видно что 700
+		font-size: 15px;
+		color: #436372;
+		font-weight: 700;
+		line-height: 12px;
+		text-decoration: none;
+		border-bottom: 1px solid transparent;
+		transition: all .5s;
+		padding-bottom: 3px;
+		&:hover{
+			color: #000;
+			border-color: #000;
+		}
+	}
+	&__list-link--active{
+		color: #000;
+	}
+}
+
+.user-nav{
+	width: 320px;
+	&__inner{
+		display: flex;
+		justify-content: space-between;
+	}
+	&__search{
+		width: 51px;
+		height: 52px;
+		background-color: #edf1f4;
+		border-radius: 50%;
+		display: flex;
+    justify-content: center;
+    align-items: center;
+	}
+	&__box{
+		width: 178px;
+		height: 51px;
+		display: flex;
+		justify-content: space-between;
+		background-color: #fcd7b6;
+		border-radius: 51px;
+		justify-content: center;
+    align-items: center;
+	}
+	&__link{
+		position: relative;
+	}
+	&__link--left{
+	 	margin-right: 30px;	
+	}
+	&__link--right{
+		margin-left: 30px;
+	}
+	&__decor{
+		width: 1px;
+		height: 32px;
+		background-color: #ffffff;
+		opacity: 0.4;
+	}
+
+	&__num{
+		position: absolute;
+		width: 16px;
+		height: 16px;
+		border-radius: 50%;
+		font-family: 'DM Sans', sans-serif;
+		font-size: 10px;
+		color: $title;
+		background-color: #fff;
+		top: -9px;
+		right: -9px;
+		text-align: center;
+		line-height: 20px;
+	}
+	&__app{
+		width: 51px;
+		height: 52px;
+		background-color: #a3bbc8;
+		border-radius: 50%;
+		display: flex;
+    justify-content: center;
+    align-items: center;
+	}
+}
+
+
+
+
+
+
 
 
 @import 'media';
