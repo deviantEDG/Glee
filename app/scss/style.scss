@@ -1,6 +1,7 @@
 @import 'vars';
 @import 'fonts';
 @import 'reset';
+@import 'libs';
 @import 'global';
 
 .header{
@@ -202,7 +203,7 @@
 		display: flex;
 	}
 	&__item{
-		margin: 0 15px;
+		margin-right: 15px;
 		&:last-child{
 			margin-right: 0;
 		}
@@ -210,8 +211,152 @@
 	&__link{
 		text-decoration: none;
 	}
+	&__link-decor{
+		margin-left: 15px;
+	}
 }
 
+.slider-top{
+	padding-top: 100px;
+	background-color: #fcd7b6;
+	&__container{
+		max-width: 1460px;
+	}
+	&__item-box{
+		display: flex;
+		justify-content: space-between;
+	}
+	&__content{
+		padding-left: 130px;
+		padding-top: 220px;
+	}
+	&__title{
+		@extend %rubik-500;
+		color: $title;
+		text-transform: uppercase;
+		font-size: 72px;
+		line-height: 70px;
+		max-width: 500px;
+		margin-bottom: 45px;
+	}
+	&__text{
+		@extend %rubik-400;
+		color: #436372;
+		font-size: 18px;
+		line-height: 30px;
+		max-width: 360px;
+		margin-bottom: 40px;
+	}
+	&__img{
+		margin-bottom: 10px;
+	}
+	&__link{
+		background-color: #a3bbc8;
+		color: #fff;
+		@extend %rubik-500;
+		font-size: 15px;
+		line-height: 12px;
+		text-decoration: none;
+		padding: 20px 20px 20px 27px;
+		& img{
+			display: inline;
+			padding-left: 60px;
+		}
+	}
+	.slick-dots{
+		display: flex;
+		justify-content: center;
+		padding-bottom: 45px;
+		li {
+			margin: 0 5px;
+			button{
+				padding: 0;
+				border: none;
+				width: 30px;
+				height: 30px;
+				font-size: 11px;
+				line-height: 8.7px;
+				@extend %rubik-500;
+				border-radius: 50%;
+				// cursor: pointer;
+				background-color: #fde3cc;
+				color: #929898;
+			}
+			&.slick-active{
+				button{
+					background-color: #fff;
+					color: $title;
+				}
+			}
+		}
+	}
+}
+
+.slider-bottom{
+	background-color: rgba(252,215,182, .2);
+	display: flex;
+	justify-content: space-between;
+	&__item{
+		max-width: 600px;
+		width: 100%;
+		padding: 50px 0 45px;
+	}
+	&__item-content{
+		max-width: 295px;
+		width: 100%;
+		margin: 0 auto;
+		vertical-align: text-top;
+		padding-left: 80px;
+		position: relative;
+		&::before{
+			content: '';
+			position: absolute;
+			top: 15px;
+			left: 0;
+		}
+	}
+	&__item-content--1{
+		&::before{
+			width: 50px;
+			height: 50px;
+			background-image: url('../images/slider/support-icon.svg');
+			background-repeat: no-repeat;
+		}
+	}
+	&__item-content--2{
+		&::before{
+			width: 50px;
+			height: 50px;
+			background-image: url('../images/slider/delivery-icon.svg');
+			background-repeat: no-repeat;
+		}
+	}
+	&__item-content--3{
+		&::before{
+			width: 50px;
+			height: 50px;
+			background-image: url('../images/slider/payment-icon.png');
+			background-repeat: no-repeat;
+		}
+	}
+	&__text{
+		@extend %dmsans-400;
+		color: #585858;
+		font-size: 14px;
+		line-height: 30px;
+	}
+	&__item--decor{
+		border-right: 1px solid rgba($title, .1);
+		border-left: 1px solid rgba($title, .1);
+	}
+	&__title{
+		@extend %dmsans-700;
+		color: #414141;
+		font-size: 18px;
+		line-height: 40px;
+		margin-bottom: 15px;
+	}
+}
 
 
 @import 'media';
