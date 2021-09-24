@@ -1,8 +1,27 @@
+html,
+body{
+	height: 100%;
+}
+body{
+	display: flex;
+	flex-direction: column;
+}
 /* Я пока не задавал для body глобальных стилей,
  поскольку на этой странице макета и цвета везде разные и шрифты и толщина,
  пока не вижу смысла, можно брать наугад */
-.container{
+
+.main{
+	flex-grow: 1;
+}
+
+ .container{
 	max-width: 1800px;
+	margin: 0 auto;
+	padding: 0 15px;
+}
+
+.container-two{
+	max-width: 1200px;
 	margin: 0 auto;
 	padding: 0 15px;
 }
