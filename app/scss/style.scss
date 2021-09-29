@@ -313,28 +313,24 @@
 			position: absolute;
 			top: 15px;
 			left: 0;
+			width: 55px;
+			height: 55px;
 		}
 	}
 	&__item-content--1{
 		&::before{
-			width: 50px;
-			height: 50px;
 			background-image: url('../images/slider/support-icon.svg');
 			background-repeat: no-repeat;
 		}
 	}
 	&__item-content--2{
 		&::before{
-			width: 50px;
-			height: 50px;
 			background-image: url('../images/slider/delivery-icon.svg');
 			background-repeat: no-repeat;
 		}
 	}
 	&__item-content--3{
 		&::before{
-			width: 50px;
-			height: 50px;
 			background-image: url('../images/slider/payment-icon.png');
 			background-repeat: no-repeat;
 		}
@@ -357,6 +353,204 @@
 		margin-bottom: 15px;
 	}
 }
+
+.product{
+	padding-top: 75px;
+	margin-bottom: 185px;
+	&__title{
+		@extend %dmsans-700;
+		color: #191919;
+		font-size: 36px;
+		text-align: center;
+		margin-bottom: 40px;
+	}
+	&__filter{
+		margin-bottom: 80px;
+		text-align: center;
+	}	
+	&__filter-btn{
+		background-color: transparent;
+		padding: 0;
+		border: none;
+		color: #8b8b8b;
+		@extend %dmsans-700;
+		font-size: 16px;
+		transition: all .3s;
+		cursor: pointer;
+	}
+	&__filter-btn + .product__filter-btn{
+		margin-left: 30px;
+	}
+	.gallery-items{
+		display: grid;
+		grid-template-columns: repeat(4, 1fr);
+		grid-gap: 40px 30px;
+	}
+	.gallery-item{
+		max-width: 270px;
+		width: 100%;
+		height: 380px;
+		max-height: 100%;
+		box-shadow: 0 6px 47px 3px rgba(37, 37, 37, 0.05);
+		border-radius: 10px;
+		position: relative;
+		text-align: center;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-around;
+		&__img-box{
+			min-width: 180px;
+			position: relative;
+			text-align: center;
+			margin: auto;
+			overflow: hidden;
+		}
+		&__images{
+			display: inline-block;
+		}
+		&__link-box{
+			position: absolute;
+			bottom: 12px;
+			width: 100%;
+			transform: translateY(300%);
+			transition: all .5s;
+			display: flex;
+			justify-content: center;
+		}
+		&:hover{
+			.gallery-item__link-box{
+				transform: translateY(0);
+			}
+		}
+		&__link{
+			display: block;
+			width: 45px;
+			height: 45px;
+			text-align: center;
+			line-height: 55px;
+			background-color: #fff;
+			border-radius: 50%;
+			margin: 0 8px;
+			transition: all .5s;
+			path{
+				transition: all .5s;
+			}
+		}
+		&__link:hover{
+			background-color: #a3bbc8;
+			path{
+				fill: #fff;
+			}
+		}
+		&__img{
+			object-fit: cover;
+		}
+		&__title{
+			color: $title;
+			@extend %dmsans-500;
+			font-size: 16px;
+			line-height: 40px;
+		}
+		&__price{
+			color: #a3bbc8;
+			@extend %dmsans-700;
+			font-size: 16px;
+			margin-bottom: 14%;
+		}
+	}
+	.mixitup-control-active{
+		color: #1a1a1a;
+	}
+}
+
+.lamp{
+	margin-bottom: 100px;
+	&__inner{
+		display: flex;
+	}
+	&__item{
+		display: flex;
+		justify-content: center;
+		width: 870px;
+		max-width: 100%;
+		height: 390px;
+		max-height: 100%;
+		background-color: #feefe2;
+		position: relative;	
+	}
+	&__item + .lamp__item{
+		margin-left: 30px;
+	}
+	&__item-box{
+		display: flex;
+		align-items: flex-end;
+		position: absolute;
+    top: -22%;
+	}
+	&__item-content{
+		width: 330px;
+		max-width: 100%;
+		padding-left: 10%;
+	}
+	&__title{
+		color: $title;
+		@extend %dmsans-700;
+		font-size: 26px;
+		line-height: 32px;
+		padding-top: 90px;
+		margin-bottom: 24px;
+	}
+	&__text{
+		color: $title;
+		@extend %rubik-400;
+		font-size: 16px;
+		margin-bottom: 35px;
+	}
+	&__link{
+		display: block;
+		width: 180px;
+		height: 60px;
+		text-align: center;
+		line-height: 60px;
+		color: #436372;
+		@extend %rubik-500;
+		background-color: transparent;
+		font-size: 15px;
+		border: 1px solid rgba($color: #436372, $alpha: .4);
+		border-radius: 5px;
+		text-decoration: none;
+		& img{
+			display: inline;
+			padding-left: 44px;
+		}
+	}
+}
+
+
+.popup{
+	background-image: url('../images/popup-bg.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center center;
+	max-width: 1920px;
+	width: 100%;
+	height: 500px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-bottom: 12px;
+}
+
+
+
+
+
+
+
+
+
+
+
 
 
 @import 'media';
